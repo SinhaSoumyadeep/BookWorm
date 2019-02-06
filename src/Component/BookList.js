@@ -81,7 +81,7 @@ class BookList extends React.Component
             }
             catch(err) {
                 //alert("error1")
-                this.setState({ err: true })
+                //this.setState({ err: true })
             }
 
 
@@ -116,7 +116,7 @@ class BookList extends React.Component
             }
             catch(err) {
                 //alert("error2")
-                this.setState({ err: true })
+                //this.setState({ err: true })
             }
 
 
@@ -131,12 +131,12 @@ class BookList extends React.Component
     find_fictionpreview(books)
     {
 
-        books.results.slice(1, 4).map((book)=>{
+        books.results.slice(0, 3).map((book)=>{
 
 
             console.log(book)
 
-            var isbn = book.isbns[1].isbn10
+            var isbn = book.isbns[0].isbn10
 
             $.ajax({
                 async: false,
@@ -153,7 +153,7 @@ class BookList extends React.Component
                     }
                     catch(err) {
                         //alert("error3")
-                        this.setState({ err: true })
+                       // this.setState({ err: true })
                     }
 
 
@@ -194,7 +194,7 @@ class BookList extends React.Component
                     }
                     catch(err) {
                         //alert("error4")
-                        this.setState({ err: true })
+                        //this.setState({ err: true })
                     }
 
 
