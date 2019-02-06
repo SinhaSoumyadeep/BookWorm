@@ -71,7 +71,7 @@ class BookList extends React.Component
     fetchAllNonFictionBooks()
     {
 
-        fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-nonfiction&api-key=700226a42e4f48859f6c2f69b23ff4c4', {
+        fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-nonfiction&api-key=UPoUahf6JMgpctJ5NqbfEdjaTMxBxkO4', {
             method: 'get',
         }).then(function(response) {return response.json()}).then((books) => {
 
@@ -106,7 +106,7 @@ class BookList extends React.Component
     fetchAllFictionBooks()
     {
 
-        fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=700226a42e4f48859f6c2f69b23ff4c4', {
+        fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=UPoUahf6JMgpctJ5NqbfEdjaTMxBxkO4', {
             method: 'get',
         }).then(function(response) {return response.json()}).then((books) => {
 
