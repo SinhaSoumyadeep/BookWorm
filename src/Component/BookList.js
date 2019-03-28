@@ -130,7 +130,8 @@ class BookList extends React.Component
 
     find_fictionpreview(books)
     {
-
+        console.log("hello fiction:\n");
+        console.log(books.results);
         books.results.slice(0, 3).map((book)=>{
 
 
@@ -174,11 +175,12 @@ class BookList extends React.Component
     }
     find_nonfictionpreview(books)
     {
-
+        console.log("hello non fiction:\n");
+        console.log(books.results);
         books.results.slice(0, 3).map((book)=>{
 
 
-            var isbn = book.isbns[0].isbn10
+            var isbn = book.isbns[0].isbn13
             $.ajax({
                 async: false,
                 type:"GET",
@@ -217,7 +219,7 @@ class BookList extends React.Component
 
         var grid = this.state.fictionBooks.slice(0, 3).map((book,index)=>{
 
-            var isbn = book.isbns[1].isbn10
+            var isbn = book.isbns[0].isbn13
 
             var img = 'https://books.google.com/books/content?id=:idkeyword:&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api'.replace(":idkeyword:",this.state.ficthumb[index])
 
